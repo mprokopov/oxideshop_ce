@@ -243,12 +243,6 @@ class ModuleNamespaceTest extends BaseModuleTestCase
                 \OxidEsales\Eshop\Core\Price::class                               => 'oeTest/without_own_module_namespace/Application/Model/TestModuleTwoPrice&' .
                                                                                      'OxidEsales\EshopCommunity\Tests\Integration\Modules\TestData\modules\with_own_module_namespace\Application\Model\TestModuleOnePrice'
             ),
-            'files'           => array(
-                'with_own_module_namespace'           => array(),
-                'without_own_module_namespace' =>
-                    array('testmoduletwomodel'             => 'without_own_module_namespace/Application/Model/TestModuleTwoModel.php'
-                    )
-            ),
             'settings'        => array(),
             'disabledModules' => array(),
             'templates'       => array(),
@@ -283,12 +277,6 @@ class ModuleNamespaceTest extends BaseModuleTestCase
                             \OxidEsales\Eshop\Application\Controller\PaymentController::class => 'oeTest/without_own_module_namespace/Application/Controller/TestModuleTwoPaymentController',
                             \OxidEsales\Eshop\Core\Price::class                               => 'oeTest/without_own_module_namespace/Application/Model/TestModuleTwoPrice'
                         ),
-                        'files'           => array(
-                            'without_own_module_namespace' =>
-                                array(
-                                    'testmoduletwomodel'             => 'without_own_module_namespace/Application/Model/TestModuleTwoModel.php'
-                                )
-                        ),
                         'settings'        => array(),
                         'disabledModules' => array('with_own_module_namespace'),
                         'templates'       => array(),
@@ -322,7 +310,6 @@ class ModuleNamespaceTest extends BaseModuleTestCase
                             \OxidEsales\Eshop\Application\Controller\PaymentController::class => 'OxidEsales\EshopCommunity\Tests\Integration\Modules\TestData\modules\with_own_module_namespace\Application\Controller\TestModuleOnePaymentController',
                             \OxidEsales\Eshop\Core\Price::class                               => 'OxidEsales\EshopCommunity\Tests\Integration\Modules\TestData\modules\with_own_module_namespace\Application\Model\TestModuleOnePrice'
                         ),
-                        'files'           => null,
                         'settings'        => array(),
                         'disabledModules' => array('without_own_module_namespace'),
                         'templates'       => array(),
@@ -459,12 +446,6 @@ class ModuleNamespaceTest extends BaseModuleTestCase
                 \OxidEsales\Eshop\Core\Price::class => 'oeTest/without_own_module_namespace/Application/Model/TestModuleTwoPrice&' .
                   'OxidEsales\EshopCommunity\Tests\Integration\Modules\TestData\modules\with_own_module_namespace\Application\Model\TestModuleOnePrice'
             ],
-            'files' => [
-                'with_own_module_namespace'    => [],
-                'without_own_module_namespace' => [
-                    'testmoduletwomodel'             => 'without_own_module_namespace/Application/Model/TestModuleTwoModel.php'
-                ]
-            ],
             'settings' => [],
             'disabledModules' => [],
             'templates'       => [],
@@ -475,11 +456,6 @@ class ModuleNamespaceTest extends BaseModuleTestCase
         ];
 
         $environmentAssertsAfterDeactivation = $environmentAssertsWithModulesActive;
-        $environmentAssertsAfterDeactivation['files'] = [
-            'without_own_module_namespace' => [
-                'testmoduletwomodel'             => 'without_own_module_namespace/Application/Model/TestModuleTwoModel.php',
-            ]
-        ];
         $environmentAssertsAfterDeactivation['versions'] = ['without_own_module_namespace' => '1.0.0'];
         $environmentAssertsAfterDeactivation['disabledModules'] = ['with_own_module_namespace'];
         $environmentAssertsAfterDeactivation['extend'] = [
@@ -603,7 +579,6 @@ class ModuleNamespaceTest extends BaseModuleTestCase
                     \OxidEsales\Eshop\Application\Controller\PaymentController::class => \OxidEsales\EshopCommunity\Tests\Integration\Modules\TestData\modules\with_own_module_namespace\Application\Controller\TestModuleOnePaymentController::class,
                     \OxidEsales\Eshop\Core\Price::class => \OxidEsales\EshopCommunity\Tests\Integration\Modules\TestData\modules\with_own_module_namespace\Application\Model\TestModuleOnePrice::class
                 ),
-                'files'           => array('with_own_module_namespace' => array()),
                 'settings'        => array(),
                 'disabledModules' => array(),
                 'templates'       => array(),
