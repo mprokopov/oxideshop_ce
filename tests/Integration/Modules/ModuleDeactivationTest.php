@@ -22,7 +22,7 @@ class ModuleDeactivationTest extends BaseModuleTestCase
             $this->caseTwoModulesPreparedDeactivatedWithEverything(),
             $this->caseFourModulesPreparedDeactivatedWithExtendedClasses(),
             $this->caseEightModulesPreparedDeactivatedWithoutExtending(),
-            $this->caseTwoModulesPreparedDeactivatedWithFiles(),
+            $this->caseTwoModulesPreparedDeactivatedWithEvents(),
             $this->caseTwoModulesPreparedDeactivatedWithTemplates(),
             $this->caseTwoModulesPreparedDeactivatedWithSettings(),
         );

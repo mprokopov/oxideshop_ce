@@ -23,6 +23,7 @@ $aModule = array(
     'extend'      => array(
         \OxidEsales\Eshop\Application\Model\Article::class => 'with_everything/myarticle',
         \OxidEsales\Eshop\Application\Model\User::class    => 'with_everything/myuser',
+        \OxidEsales\Eshop\Application\Model\Order::class    => 'with_everything/myorder1',
     ),
     'blocks'      => array(
         array('template' => 'page/checkout/basket.tpl', 'block' => 'basket_btn_next_top', 'file' => '/views/blocks/page/checkout/myexpresscheckout.tpl'),
