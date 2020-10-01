@@ -162,6 +162,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Supporting two stars (**) in modules composer blacklist-filter, in order to use standard Symfony/finder functionality
 - Version information is not shown anymore in html copyright string [PR-813](https://github.com/OXID-eSales/oxideshop_ce/pull/813)
 - Old update procedure related updateApp directory check and mentions [PR-829](https://github.com/OXID-eSales/oxideshop_ce/pull/829)
+- Remove support of metadata version 1, 1.1 and 1.2
 
 ### Fixed
 - Fix not working actions and promotions [#0005526](https://bugs.oxid-esales.com/view.php?id=5526)
