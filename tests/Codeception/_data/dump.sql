@@ -107,6 +107,10 @@ REPLACE INTO `oxattribute` (`OXID`,           `OXSHOPID`,   `OXTITLE`,          
                           ('testattribute3', 1, 'Test attribute 3 [DE] šÄßüл', 'Test attribute 3 [EN] šÄßüл', 2);
 UPDATE `oxattribute` SET `OXDISPLAYINBASKET` = 0;
 
+#Add default admin user
+REPLACE INTO `oxuser` (`OXID`, `OXACTIVE`, `OXRIGHTS`, `OXSHOPID`, `OXUSERNAME`, `OXPASSWORD`, `OXPASSSALT`, `OXCUSTNR`, `OXUSTID`, `OXCOMPANY`, `OXFNAME`, `OXLNAME`, `OXSTREET`, `OXSTREETNR`, `OXADDINFO`, `OXCITY`, `OXCOUNTRYID`, `OXSTATEID`, `OXZIP`, `OXFON`, `OXFAX`, `OXSAL`, `OXBONI`, `OXCREATE`, `OXREGISTER`, `OXPRIVFON`, `OXMOBFON`, `OXBIRTHDATE`, `OXURL`, `OXUPDATEKEY`, `OXUPDATEEXP`, `OXPOINTS`, `OXTIMESTAMP`) VALUES
+('e7af1c3b786fd02906ccd75698f4e6b9',1,'user',1,'info@oxid-esales.com','08e4b8e9f77d78d92fe17bf276783d5f','6537613339316161636532363266356338616564303034326163326235316266',2,'','','Marc','Muster','Hauptstr.','13','','Freiburg','a7c40f631fc920687.20179984','','79098','','','MR',1000,'2011-02-01 08:41:25','2011-02-01 08:41:25','','','0000-00-00','','',0,0,'2020-07-16 14:22:01'),('oxdefaultadmin',1,'malladmin',1,'admin','961d792c7bd62c54f035060a125cc084c9b1fef19c10aa36835c386f78687f644b401063fbb65ba66120bad9ceccebb78e14ba6936a98b3540c1c09c8c4af2c5','8c7081864f201784016f71b6fe02fcfb',1,'','Your Company Name','John','Doe','Maple Street','2425','','Any City','a7c40f631fc920687.20179984','','9041','217-8918712','217-8918713','MR',1000,'2003-01-01 00:00:00','2003-01-01 00:00:00','','','0000-00-00','','',0,0,'2020-07-16 14:22:01');
+
 #set country, username, password for default user
 UPDATE oxuser
   SET
